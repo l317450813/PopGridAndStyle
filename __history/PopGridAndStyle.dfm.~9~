@@ -1,0 +1,1110 @@
+object GridForm: TGridForm
+  Left = 0
+  Top = 0
+  Caption = 'GridForm'
+  ClientHeight = 300
+  ClientWidth = 635
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  PixelsPerInch = 96
+  TextHeight = 13
+  object cxstylrpstry: TcxStyleRepository
+    Left = 320
+    Top = 128
+    PixelsPerInch = 96
+    object cxstylHeader: TcxStyle
+      AssignedValues = [svColor, svFont]
+      Color = 16763955
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -13
+      Font.Name = #24494#36719#38597#40657
+      Font.Style = []
+    end
+    object cxstylOdd: TcxStyle
+      AssignedValues = [svColor, svFont]
+      Color = 16777164
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -12
+      Font.Name = #24494#36719#38597#40657
+      Font.Style = []
+    end
+    object cxstylEven: TcxStyle
+      AssignedValues = [svColor, svFont]
+      Color = clSkyBlue
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -12
+      Font.Name = #24494#36719#38597#40657
+      Font.Style = []
+    end
+    object cxstylSelection: TcxStyle
+      AssignedValues = [svColor, svFont, svTextColor]
+      Color = clYellow
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -12
+      Font.Name = #24494#36719#38597#40657
+      Font.Style = []
+      TextColor = clMaroon
+    end
+    object cxstylBackGround: TcxStyle
+      AssignedValues = [svColor, svFont]
+      Color = 12369084
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -13
+      Font.Name = #23435#20307
+      Font.Style = []
+    end
+    object cxstylHeaderBold: TcxStyle
+      AssignedValues = [svColor, svFont]
+      Color = 16763955
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -13
+      Font.Name = #23435#20307
+      Font.Style = [fsBold]
+    end
+    object cxstylBkg: TcxStyle
+      AssignedValues = [svColor, svFont, svTextColor]
+      Color = 16772301
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -13
+      Font.Name = #24494#36719#38597#40657
+      Font.Style = []
+      TextColor = clBlack
+    end
+    object cxstylHighLightBlueBk: TcxStyle
+      AssignedValues = [svColor, svFont]
+      Color = 16763955
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -13
+      Font.Name = #23435#20307
+      Font.Style = []
+    end
+    object cxstylHeader11: TcxStyle
+      AssignedValues = [svColor, svFont]
+      Color = 16763955
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -15
+      Font.Name = #24494#36719#38597#40657
+      Font.Style = []
+    end
+    object cxstylOdd11: TcxStyle
+      AssignedValues = [svColor, svFont]
+      Color = 16777164
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -15
+      Font.Name = #24494#36719#38597#40657
+      Font.Style = []
+    end
+    object cxstylEven11: TcxStyle
+      AssignedValues = [svColor, svFont]
+      Color = clWhite
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -15
+      Font.Name = #24494#36719#38597#40657
+      Font.Style = []
+    end
+    object cxstylSelection11: TcxStyle
+      AssignedValues = [svColor, svFont, svTextColor]
+      Color = clYellow
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -15
+      Font.Name = #24494#36719#38597#40657
+      Font.Style = []
+      TextColor = clMaroon
+    end
+    object cxstylHeaderBold11: TcxStyle
+      AssignedValues = [svColor, svFont]
+      Color = 16763955
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -15
+      Font.Name = #24494#36719#38597#40657
+      Font.Style = []
+    end
+    object cxstylGroup11: TcxStyle
+      AssignedValues = [svColor, svFont, svTextColor]
+      Color = 16763955
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -15
+      Font.Name = #24494#36719#38597#40657
+      Font.Style = []
+      TextColor = clBlack
+    end
+    object cxstylGroup10: TcxStyle
+      AssignedValues = [svColor, svFont]
+      Color = 16763955
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -13
+      Font.Name = #24494#36719#38597#40657
+      Font.Style = []
+    end
+    object HeaderYH9: TcxStyle
+      AssignedValues = [svColor, svFont]
+      Color = 16763955
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -12
+      Font.Name = #24494#36719#38597#40657
+      Font.Style = []
+    end
+    object HeaderYH10: TcxStyle
+      AssignedValues = [svColor, svFont]
+      Color = 16763955
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -13
+      Font.Name = #24494#36719#38597#40657
+      Font.Style = []
+    end
+    object OddYH9: TcxStyle
+      AssignedValues = [svColor, svFont]
+      Color = 16777164
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -12
+      Font.Name = #24494#36719#38597#40657
+      Font.Style = []
+    end
+    object OddYH10: TcxStyle
+      AssignedValues = [svColor, svFont]
+      Color = 16777164
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -13
+      Font.Name = #24494#36719#38597#40657
+      Font.Style = []
+    end
+    object EvenYH9: TcxStyle
+      AssignedValues = [svColor, svFont]
+      Color = clWhite
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -12
+      Font.Name = #24494#36719#38597#40657
+      Font.Style = []
+    end
+    object EvenYH10: TcxStyle
+      AssignedValues = [svColor, svFont]
+      Color = clWhite
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -13
+      Font.Name = #24494#36719#38597#40657
+      Font.Style = []
+    end
+    object SelectionYH9: TcxStyle
+      AssignedValues = [svColor, svFont, svTextColor]
+      Color = clYellow
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -12
+      Font.Name = #24494#36719#38597#40657
+      Font.Style = []
+      TextColor = clMaroon
+    end
+    object SelectionYH10: TcxStyle
+      AssignedValues = [svColor, svFont, svTextColor]
+      Color = clYellow
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -13
+      Font.Name = #24494#36719#38597#40657
+      Font.Style = []
+      TextColor = clMaroon
+    end
+    object cxstyl1: TcxStyle
+      AssignedValues = [svFont]
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Height = -13
+      Font.Name = #24494#36719#38597#40657
+      Font.Style = []
+    end
+    object cxstylRedBk: TcxStyle
+      AssignedValues = [svColor, svFont]
+      Color = clRed
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -12
+      Font.Name = #24494#36719#38597#40657
+      Font.Style = []
+    end
+    object OrderStoped: TcxStyle
+      AssignedValues = [svColor, svFont, svTextColor]
+      Color = clSkyBlue
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -12
+      Font.Name = #24494#36719#38597#40657
+      Font.Style = []
+      TextColor = clRed
+    end
+    object OrderCancelled: TcxStyle
+      AssignedValues = [svColor, svFont, svTextColor]
+      Color = clSkyBlue
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -12
+      Font.Name = #24494#36719#38597#40657
+      Font.Style = []
+      TextColor = clGrayText
+    end
+    object SkinTestPsositiveYH9: TcxStyle
+    end
+    object cxstylredfont: TcxStyle
+      AssignedValues = [svColor, svFont, svTextColor]
+      Color = clWhite
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -12
+      Font.Name = #24494#36719#38597#40657
+      Font.Style = []
+      TextColor = clRed
+    end
+    object cxstyl_RedFont13: TcxStyle
+      AssignedValues = [svColor, svFont, svTextColor]
+      Color = clWhite
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -17
+      Font.Name = #24494#36719#38597#40657
+      Font.Style = []
+      TextColor = clRed
+    end
+    object cxstyl_GreenFont13: TcxStyle
+      AssignedValues = [svColor, svFont, svTextColor]
+      Color = clWhite
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -17
+      Font.Name = #24494#36719#38597#40657
+      Font.Style = []
+      TextColor = clGreen
+    end
+    object cxstyl_Header14: TcxStyle
+      AssignedValues = [svColor, svFont, svTextColor]
+      Color = 16763955
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -19
+      Font.Name = #24494#36719#38597#40657
+      Font.Style = [fsBold]
+      TextColor = clBlack
+    end
+    object cxstyl_content13: TcxStyle
+      AssignedValues = [svColor, svFont, svTextColor]
+      Color = clWhite
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -17
+      Font.Name = #24494#36719#38597#40657
+      Font.Style = []
+      TextColor = clBlack
+    end
+    object cxstyl_select13: TcxStyle
+      AssignedValues = [svColor, svFont, svTextColor]
+      Color = 16763955
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -17
+      Font.Name = #24494#36719#38597#40657
+      Font.Style = [fsBold]
+      TextColor = clBlack
+    end
+    object cxstyl_odd13: TcxStyle
+      AssignedValues = [svColor, svFont, svTextColor]
+      Color = 16777164
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -17
+      Font.Name = #24494#36719#38597#40657
+      Font.Style = []
+      TextColor = clBlack
+    end
+    object cxstyl_even13: TcxStyle
+      AssignedValues = [svColor, svFont, svTextColor]
+      Color = clWhite
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -17
+      Font.Name = #24494#36719#38597#40657
+      Font.Style = []
+      TextColor = clBlack
+    end
+    object cxstyl_selectYellow13: TcxStyle
+      AssignedValues = [svColor, svFont, svTextColor]
+      Color = clYellow
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -17
+      Font.Name = #24494#36719#38597#40657
+      Font.Style = [fsBold]
+      TextColor = clBlack
+    end
+    object cxstyl_footer13: TcxStyle
+      AssignedValues = [svColor, svFont, svTextColor]
+      Color = clSkyBlue
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -17
+      Font.Name = #24494#36719#38597#40657
+      Font.Style = [fsBold]
+      TextColor = clBlack
+    end
+    object cxstyl_content10: TcxStyle
+      AssignedValues = [svColor, svFont]
+      Color = clWhite
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -13
+      Font.Name = #24494#36719#38597#40657
+      Font.Style = [fsBold]
+    end
+    object commonStyle: TcxGridBandedTableViewStyleSheet
+      Caption = 'cxgrdbndtblvwstylshtNormal11'
+      Styles.Background = cxstylBkg
+      Styles.ContentEven = cxstylEven
+      Styles.ContentOdd = cxstylOdd
+      Styles.Selection = cxstylSelection
+      Styles.Header = cxstylHeader
+      BuiltIn = True
+    end
+    object YZvw10: TcxGridTableViewStyleSheet
+      Styles.Background = cxstylBkg
+      Styles.ContentEven = cxstylEven
+      Styles.ContentOdd = cxstylOdd
+      Styles.Header = cxstylHeader
+      Styles.Indicator = cxstylHeader
+      BuiltIn = True
+    end
+    object tblVwStyle11: TcxGridTableViewStyleSheet
+      Styles.Background = cxstylBkg
+      Styles.ContentEven = cxstylEven11
+      Styles.ContentOdd = cxstylOdd11
+      Styles.Inactive = cxstylSelection
+      Styles.Selection = cxstylSelection11
+      Styles.Group = cxstylGroup11
+      Styles.Header = cxstylHeader11
+      Styles.Indicator = cxstylHeader11
+      BuiltIn = True
+    end
+    object bndsht10OE: TcxGridBandedTableViewStyleSheet
+      Styles.Background = cxstylBkg
+      Styles.ContentEven = EvenYH10
+      Styles.ContentOdd = OddYH10
+      Styles.Inactive = SelectionYH10
+      Styles.Selection = SelectionYH10
+      Styles.Header = HeaderYH10
+      Styles.Indicator = HeaderYH10
+      BuiltIn = True
+    end
+    object bndsht9: TcxGridBandedTableViewStyleSheet
+      Styles.Background = cxstylBkg
+      Styles.ContentEven = EvenYH9
+      Styles.ContentOdd = cxstylOdd
+      Styles.Inactive = SelectionYH9
+      Styles.Selection = SelectionYH9
+      Styles.Header = HeaderYH9
+      Styles.Indicator = HeaderYH9
+      BuiltIn = True
+    end
+    object Yzvw13: TcxGridTableViewStyleSheet
+      Styles.Background = cxstylBkg
+      Styles.Content = cxstyl_content13
+      Styles.Inactive = cxstyl_select13
+      Styles.Selection = cxstyl_select13
+      Styles.Footer = cxstyl_footer13
+      Styles.Header = cxstyl_Header14
+      Styles.Indicator = cxstyl_select13
+      BuiltIn = True
+    end
+    object Yzvw13new: TcxGridTableViewStyleSheet
+      Styles.Background = cxstylBkg
+      Styles.ContentEven = cxstyl_even13
+      Styles.ContentOdd = cxstyl_odd13
+      Styles.Inactive = cxstyl_select13
+      Styles.Selection = cxstyl_selectYellow13
+      Styles.Header = cxstyl_Header14
+      Styles.Indicator = cxstyl_selectYellow13
+      BuiltIn = True
+    end
+  end
+  object ds_sjj: TDataSource
+    Left = 344
+    Top = 192
+  end
+  object cxStyle_new_style: TcxStyleRepository
+    Left = 256
+    Top = 128
+    PixelsPerInch = 96
+    object cxStyle1: TcxStyle
+      AssignedValues = [svColor, svFont]
+      Color = 16763955
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -13
+      Font.Name = #24494#36719#38597#40657
+      Font.Style = []
+    end
+    object cxStyle2: TcxStyle
+      AssignedValues = [svColor, svFont]
+      Color = 16777164
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -12
+      Font.Name = #24494#36719#38597#40657
+      Font.Style = []
+    end
+    object cxStyle3: TcxStyle
+      AssignedValues = [svColor, svFont]
+      Color = clWhite
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -12
+      Font.Name = #24494#36719#38597#40657
+      Font.Style = []
+    end
+    object cxStyle4: TcxStyle
+      AssignedValues = [svColor, svFont, svTextColor]
+      Color = clYellow
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -12
+      Font.Name = #24494#36719#38597#40657
+      Font.Style = []
+      TextColor = clMaroon
+    end
+    object cxStyle5: TcxStyle
+      AssignedValues = [svColor, svFont]
+      Color = 12369084
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -13
+      Font.Name = #23435#20307
+      Font.Style = []
+    end
+    object cxStyle6: TcxStyle
+      AssignedValues = [svColor, svFont]
+      Color = 16763955
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -13
+      Font.Name = #23435#20307
+      Font.Style = [fsBold]
+    end
+    object cxStyle7: TcxStyle
+      AssignedValues = [svColor, svFont]
+      Color = 16772301
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -13
+      Font.Name = #24494#36719#38597#40657
+      Font.Style = []
+    end
+    object cxStyle8: TcxStyle
+      AssignedValues = [svColor, svFont]
+      Color = 16763955
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -13
+      Font.Name = #23435#20307
+      Font.Style = []
+    end
+    object cxStyle9: TcxStyle
+      AssignedValues = [svColor, svFont]
+      Color = 16763955
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -12
+      Font.Name = #24494#36719#38597#40657
+      Font.Style = []
+    end
+    object cxStyle10: TcxStyle
+      AssignedValues = [svColor, svFont]
+      Color = 16777164
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -12
+      Font.Name = #24494#36719#38597#40657
+      Font.Style = []
+    end
+    object cxStyle11: TcxStyle
+      AssignedValues = [svColor, svFont]
+      Color = clWhite
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -12
+      Font.Name = #24494#36719#38597#40657
+      Font.Style = []
+    end
+    object cxStyle12: TcxStyle
+      AssignedValues = [svColor, svFont, svTextColor]
+      Color = clYellow
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -12
+      Font.Name = #24494#36719#38597#40657
+      Font.Style = []
+      TextColor = clMaroon
+    end
+    object cxStyle13: TcxStyle
+      AssignedValues = [svColor, svFont]
+      Color = 16763955
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -15
+      Font.Name = #23435#20307
+      Font.Style = [fsBold]
+    end
+    object cxStyle14: TcxStyle
+      AssignedValues = [svColor, svFont, svTextColor]
+      Color = 16763955
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -15
+      Font.Name = #24494#36719#38597#40657
+      Font.Style = [fsBold]
+      TextColor = clBlack
+    end
+    object cxStyle15: TcxStyle
+      AssignedValues = [svColor, svFont]
+      Color = 16763955
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -13
+      Font.Name = #24494#36719#38597#40657
+      Font.Style = []
+    end
+    object cxStyle16: TcxStyle
+      AssignedValues = [svColor, svFont]
+      Color = 16763955
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -13
+      Font.Name = #24494#36719#38597#40657
+      Font.Style = []
+    end
+    object cxStyle17: TcxStyle
+      AssignedValues = [svColor, svFont]
+      Color = 16763955
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -13
+      Font.Name = #24494#36719#38597#40657
+      Font.Style = []
+    end
+    object cxStyle18: TcxStyle
+      AssignedValues = [svColor, svFont]
+      Color = 16777164
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -12
+      Font.Name = #24494#36719#38597#40657
+      Font.Style = []
+    end
+    object cxStyle19: TcxStyle
+      AssignedValues = [svColor, svFont]
+      Color = 16777164
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -13
+      Font.Name = #24494#36719#38597#40657
+      Font.Style = []
+    end
+    object cxStyle20: TcxStyle
+      AssignedValues = [svColor, svFont]
+      Color = clWhite
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -12
+      Font.Name = #24494#36719#38597#40657
+      Font.Style = []
+    end
+    object cxStyle21: TcxStyle
+      AssignedValues = [svColor, svFont]
+      Color = clWhite
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -13
+      Font.Name = #24494#36719#38597#40657
+      Font.Style = []
+    end
+    object cxStyle22: TcxStyle
+      AssignedValues = [svColor, svFont, svTextColor]
+      Color = clYellow
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -12
+      Font.Name = #24494#36719#38597#40657
+      Font.Style = []
+      TextColor = clMaroon
+    end
+    object cxStyle23: TcxStyle
+      AssignedValues = [svColor, svFont, svTextColor]
+      Color = clYellow
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -13
+      Font.Name = #24494#36719#38597#40657
+      Font.Style = []
+      TextColor = clMaroon
+    end
+    object cxStyle24: TcxStyle
+      AssignedValues = [svFont]
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Height = -13
+      Font.Name = #24494#36719#38597#40657
+      Font.Style = []
+    end
+    object cxStyle25: TcxStyle
+      AssignedValues = [svColor, svFont]
+      Color = clRed
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -12
+      Font.Name = #24494#36719#38597#40657
+      Font.Style = []
+    end
+    object cxStyle26: TcxStyle
+      AssignedValues = [svColor, svFont, svTextColor]
+      Color = clSkyBlue
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -13
+      Font.Name = #24494#36719#38597#40657
+      Font.Style = []
+      TextColor = clRed
+    end
+    object cxStyle27: TcxStyle
+      AssignedValues = [svColor, svFont, svTextColor]
+      Color = clSkyBlue
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -12
+      Font.Name = #24494#36719#38597#40657
+      Font.Style = []
+      TextColor = clGrayText
+    end
+    object cxStyle28: TcxStyle
+    end
+    object cxStyle29: TcxStyle
+      AssignedValues = [svColor, svFont, svTextColor]
+      Color = clWhite
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -13
+      Font.Name = #24494#36719#38597#40657
+      Font.Style = []
+      TextColor = clRed
+    end
+    object YaHe_N12_Header: TcxStyle
+      AssignedValues = [svColor, svFont]
+      Color = 16763955
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -16
+      Font.Name = #24494#36719#38597#40657
+      Font.Style = []
+    end
+    object YaHe_N12_Even: TcxStyle
+      AssignedValues = [svColor, svFont]
+      Color = clWhite
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -16
+      Font.Name = #24494#36719#38597#40657
+      Font.Style = []
+    end
+    object YaHe_N12_Odd: TcxStyle
+      AssignedValues = [svColor, svFont]
+      Color = 16777164
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -16
+      Font.Name = #24494#36719#38597#40657
+      Font.Style = []
+    end
+    object YaHe_N12_Selection: TcxStyle
+      AssignedValues = [svColor, svFont, svTextColor]
+      Color = clYellow
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -16
+      Font.Name = #24494#36719#38597#40657
+      Font.Style = []
+      TextColor = clMaroon
+    end
+    object YaHe_N11_Header: TcxStyle
+      AssignedValues = [svColor, svFont]
+      Color = 16763955
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -15
+      Font.Name = #24494#36719#38597#40657
+      Font.Style = []
+    end
+    object YaHe_N11_Even: TcxStyle
+      AssignedValues = [svColor, svFont]
+      Color = clWhite
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -15
+      Font.Name = #24494#36719#38597#40657
+      Font.Style = []
+    end
+    object YaHe_N11_Odd: TcxStyle
+      AssignedValues = [svColor, svFont]
+      Color = 16777164
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -15
+      Font.Name = #24494#36719#38597#40657
+      Font.Style = []
+    end
+    object YaHe_N11_Selection: TcxStyle
+      AssignedValues = [svColor, svFont, svTextColor]
+      Color = clYellow
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -15
+      Font.Name = #24494#36719#38597#40657
+      Font.Style = [fsBold]
+      TextColor = clMaroon
+    end
+    object YaHe_N10_Header: TcxStyle
+      AssignedValues = [svColor, svFont]
+      Color = 16763955
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -13
+      Font.Name = #24494#36719#38597#40657
+      Font.Style = []
+    end
+    object YaHe_N10_Even: TcxStyle
+      AssignedValues = [svColor, svFont]
+      Color = clWhite
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -13
+      Font.Name = #24494#36719#38597#40657
+      Font.Style = []
+    end
+    object YaHe_N10_Odd: TcxStyle
+      AssignedValues = [svColor, svFont]
+      Color = 16777164
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -13
+      Font.Name = #24494#36719#38597#40657
+      Font.Style = []
+    end
+    object YaHe_N10_Selection: TcxStyle
+      AssignedValues = [svColor, svFont, svTextColor]
+      Color = clYellow
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -13
+      Font.Name = #24494#36719#38597#40657
+      Font.Style = []
+      TextColor = clMaroon
+    end
+    object YaHe_N9_Header: TcxStyle
+      AssignedValues = [svColor, svFont]
+      Color = 16763955
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -12
+      Font.Name = #24494#36719#38597#40657
+      Font.Style = []
+    end
+    object YaHe_N9_Even: TcxStyle
+      AssignedValues = [svColor, svFont]
+      Color = clWhite
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -12
+      Font.Name = #24494#36719#38597#40657
+      Font.Style = []
+    end
+    object YaHe_N9_Odd: TcxStyle
+      AssignedValues = [svColor, svFont]
+      Color = 16777164
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -12
+      Font.Name = #24494#36719#38597#40657
+      Font.Style = []
+    end
+    object YaHe_N9_Selection: TcxStyle
+      AssignedValues = [svColor, svFont, svTextColor]
+      Color = clYellow
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -12
+      Font.Name = #24494#36719#38597#40657
+      Font.Style = []
+      TextColor = clMaroon
+    end
+    object YaHe_N10_GreenFont: TcxStyle
+      AssignedValues = [svFont, svTextColor]
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -13
+      Font.Name = #24494#36719#38597#40657
+      Font.Style = []
+      TextColor = clGreen
+    end
+    object YaHe_N11_lcljbr: TcxStyle
+      AssignedValues = [svFont, svTextColor]
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -15
+      Font.Name = #24494#36719#38597#40657
+      Font.Style = [fsBold]
+      TextColor = clNavy
+    end
+    object YaHe_N10_stop_today: TcxStyle
+      AssignedValues = [svColor, svFont, svTextColor]
+      Color = clSkyBlue
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -13
+      Font.Name = #24494#36719#38597#40657
+      Font.Style = []
+      TextColor = clRed
+    end
+    object YaHe_N10_long: TcxStyle
+      AssignedValues = [svColor, svFont]
+      Color = clWhite
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -13
+      Font.Name = #24494#36719#38597#40657
+      Font.Style = []
+    end
+    object YaHe_N10_temp: TcxStyle
+      AssignedValues = [svColor, svFont]
+      Color = 14024574
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -13
+      Font.Name = #24494#36719#38597#40657
+      Font.Style = []
+    end
+    object YaHe_N10_stopped: TcxStyle
+      AssignedValues = [svColor, svTextColor]
+      Color = clWhite
+      TextColor = clRed
+    end
+    object YaHe_N10_cancel: TcxStyle
+      AssignedValues = [svColor]
+      Color = 12698049
+    end
+    object YaHe_N10_special: TcxStyle
+      AssignedValues = [svColor, svFont]
+      Color = clRed
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -13
+      Font.Name = #24494#36719#38597#40657
+      Font.Style = []
+    end
+    object YaHe_N11_Footer: TcxStyle
+      AssignedValues = [svColor, svFont, svTextColor]
+      Color = 16763955
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clRed
+      Font.Height = -15
+      Font.Name = #24494#36719#38597#40657
+      Font.Style = [fsBold]
+      TextColor = clRed
+    end
+    object YaHe_N10_Footer: TcxStyle
+      AssignedValues = [svColor, svFont, svTextColor]
+      Color = 16763955
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -13
+      Font.Name = #24494#36719#38597#40657
+      Font.Style = [fsBold]
+      TextColor = clRed
+    end
+    object yahe10_red: TcxStyle
+      AssignedValues = [svFont, svTextColor]
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -13
+      Font.Name = #24494#36719#38597#40657
+      Font.Style = []
+      TextColor = clRed
+    end
+    object yahe10_green: TcxStyle
+      AssignedValues = [svFont, svTextColor]
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -13
+      Font.Name = #24494#36719#38597#40657
+      Font.Style = []
+      TextColor = clGreen
+    end
+    object yahe10_purple: TcxStyle
+      AssignedValues = [svFont, svTextColor]
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -13
+      Font.Name = #24494#36719#38597#40657
+      Font.Style = []
+      TextColor = clPurple
+    end
+    object cxGridBandedTableViewStyleSheet1: TcxGridBandedTableViewStyleSheet
+      Caption = 'cxgrdbndtblvwstylshtNormal11'
+      Styles.Background = cxStyle7
+      Styles.ContentEven = cxStyle3
+      Styles.ContentOdd = cxStyle2
+      Styles.Selection = cxStyle4
+      Styles.Header = cxStyle1
+      BuiltIn = True
+    end
+    object cxGridTableViewStyleSheet1: TcxGridTableViewStyleSheet
+      Styles.Background = cxStyle7
+      Styles.ContentEven = cxStyle3
+      Styles.ContentOdd = cxStyle2
+      Styles.Inactive = cxStyle4
+      Styles.Selection = cxStyle4
+      Styles.Header = cxStyle1
+      Styles.Indicator = cxStyle1
+      BuiltIn = True
+    end
+    object cxGridTableViewStyleSheet2: TcxGridTableViewStyleSheet
+      Styles.Background = cxStyle7
+      Styles.ContentEven = cxStyle11
+      Styles.ContentOdd = cxStyle10
+      Styles.Inactive = cxStyle4
+      Styles.Selection = cxStyle12
+      Styles.Group = cxStyle14
+      Styles.Header = cxStyle9
+      Styles.Indicator = cxStyle9
+      BuiltIn = True
+    end
+    object cxGridBandedTableViewStyleSheet2: TcxGridBandedTableViewStyleSheet
+      Styles.Background = cxStyle7
+      Styles.ContentEven = cxStyle21
+      Styles.ContentOdd = cxStyle19
+      Styles.Inactive = cxStyle23
+      Styles.Selection = cxStyle23
+      Styles.Header = cxStyle17
+      Styles.Indicator = cxStyle17
+      BuiltIn = True
+    end
+    object cxGridBandedTableViewStyleSheet3: TcxGridBandedTableViewStyleSheet
+      Styles.Background = cxStyle7
+      Styles.ContentEven = cxStyle20
+      Styles.ContentOdd = cxStyle2
+      Styles.Inactive = cxStyle22
+      Styles.Selection = cxStyle22
+      Styles.Header = cxStyle16
+      Styles.Indicator = cxStyle16
+      BuiltIn = True
+    end
+    object YaHe12Normal: TcxGridTableViewStyleSheet
+      Styles.Background = cxStyle7
+      Styles.ContentEven = YaHe_N12_Even
+      Styles.ContentOdd = YaHe_N12_Odd
+      Styles.Inactive = YaHe_N12_Selection
+      Styles.Selection = YaHe_N12_Selection
+      Styles.Header = YaHe_N12_Header
+      BuiltIn = True
+    end
+    object YaHe11Normal_simple: TcxGridTableViewStyleSheet
+      Styles.Background = cxStyle7
+      Styles.Inactive = YaHe_N11_Selection
+      Styles.IncSearch = YaHe_N11_Selection
+      Styles.Selection = YaHe_N11_Selection
+      Styles.Footer = YaHe_N11_Footer
+      Styles.Group = cxStyle14
+      Styles.GroupByBox = YaHe_N11_Header
+      Styles.Header = YaHe_N11_Header
+      Styles.Indicator = YaHe_N11_Header
+      BuiltIn = True
+    end
+    object YaHe10Normal_simple: TcxGridTableViewStyleSheet
+      Styles.Background = cxStyle7
+      Styles.Inactive = YaHe_N10_Selection
+      Styles.IncSearch = YaHe_N10_Selection
+      Styles.Selection = YaHe_N10_Selection
+      Styles.Footer = YaHe_N10_Footer
+      Styles.Group = YaHe_N10_Header
+      Styles.GroupByBox = YaHe_N10_Header
+      Styles.Header = YaHe_N10_Header
+      Styles.Indicator = YaHe_N10_Header
+      BuiltIn = True
+    end
+    object YaHe9Normal: TcxGridTableViewStyleSheet
+      Styles.Background = cxStyle7
+      Styles.ContentEven = YaHe_N9_Even
+      Styles.ContentOdd = YaHe_N9_Odd
+      Styles.Inactive = YaHe_N9_Selection
+      Styles.Selection = YaHe_N9_Selection
+      Styles.Header = YaHe_N9_Header
+      Styles.Indicator = YaHe_N9_Header
+      BuiltIn = True
+    end
+    object bndYaHe10Normal: TcxGridBandedTableViewStyleSheet
+      Styles.Background = cxStyle7
+      Styles.ContentEven = YaHe_N10_Even
+      Styles.ContentOdd = YaHe_N10_Odd
+      Styles.Inactive = YaHe_N10_Selection
+      Styles.Selection = YaHe_N10_Selection
+      Styles.Header = YaHe_N10_Header
+      Styles.Indicator = YaHe_N10_Header
+      Styles.BandBackground = cxStyle7
+      Styles.BandHeader = YaHe_N10_Header
+      BuiltIn = True
+    end
+    object bndYaHe11Normal: TcxGridBandedTableViewStyleSheet
+      Styles.Background = cxStyle7
+      Styles.ContentEven = YaHe_N11_Even
+      Styles.ContentOdd = YaHe_N11_Odd
+      Styles.Inactive = YaHe_N11_Selection
+      Styles.Selection = YaHe_N11_Selection
+      Styles.Header = YaHe_N11_Header
+      Styles.Indicator = YaHe_N11_Header
+      Styles.BandBackground = cxStyle7
+      Styles.BandHeader = YaHe_N11_Header
+      BuiltIn = True
+    end
+    object bndYaHe12Normal: TcxGridBandedTableViewStyleSheet
+      Styles.Background = cxStyle7
+      Styles.ContentEven = YaHe_N12_Even
+      Styles.ContentOdd = YaHe_N12_Odd
+      Styles.Inactive = YaHe_N12_Selection
+      Styles.Selection = YaHe_N12_Selection
+      Styles.Header = YaHe_N12_Header
+      Styles.Indicator = YaHe_N12_Header
+      Styles.BandBackground = cxStyle7
+      Styles.BandHeader = YaHe_N12_Header
+      BuiltIn = True
+    end
+  end
+end
