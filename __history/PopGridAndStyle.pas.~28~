@@ -595,9 +595,15 @@ begin
   begin
     TComboBox(FFocusedControl).Text := ListBox.SelectedItem;
     if Assigned(FNextControl) then
+    begin
+    if FNextControl.CanFocus then
       FNextControl.SetFocus
+    end
     else
+    begin
+    if FFocusedControl.CanFocus then
       FFocusedControl.SetFocus;
+    end;
     TWinControl(Sender).Visible := False;
   end;
   if Key = #27 then
@@ -726,8 +732,10 @@ begin
 
       jibie := TcxGridLevel(aCxgridTableView.Level);
       aGrid := TcxGrid(jibie.Control);
-      aGrid.Visible := true;
+      aGrid.Width:=aControl.Width;
       aCxgridTableView.ApplyBestFit();
+      
+      aGrid.Visible := true;
       SetLeftAndTop(aControl, _left, _top);
 
       aGrid.Left := _left;
@@ -861,9 +869,15 @@ begin
     _list.Free;
   end;
   if Assigned(FNextControl) then
+  begin
+  if FNextControl.canfocus then
     FNextControl.SetFocus
+  end
   else
+  begin
+  if FFocusedControl.canfocus then
     FFocusedControl.SetFocus;
+  end;
 end;
 
 procedure TGridForm.SetValueFofGrid;

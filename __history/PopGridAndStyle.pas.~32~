@@ -272,9 +272,12 @@ begin
 
   if Key = #27 then
   begin
-    _level := TcxGridLevel(TcxGridDBTableView(Sender).Level);
-    _grid := TcxGrid(_level.Control);
-    _grid.Visible := False;
+    if Assigned(Fpopgrid) then
+    begin
+      _level := TcxGridLevel(Fpopgrid.Level);
+      _grid := TcxGrid(_level.Control);
+      _grid.Visible := False;
+    end;
   end;
 end;
 
@@ -592,15 +595,22 @@ begin
   begin
     TComboBox(FFocusedControl).Text := ListBox.SelectedItem;
     if Assigned(FNextControl) then
-      FNextControl.SetFocus
+    begin
+      if FNextControl.CanFocus then
+        FNextControl.SetFocus
+    end
     else
-      FFocusedControl.SetFocus;
+    begin
+      if FFocusedControl.CanFocus then
+        FFocusedControl.SetFocus;
+    end;
     TWinControl(Sender).Visible := False;
   end;
   if Key = #27 then
   begin
     TWinControl(Sender).Visible := False;
-    FFocusedControl.SetFocus;
+    if FFocusedControl.CanFocus then
+      FFocusedControl.SetFocus;
     TComboBox(FFocusedControl).SelectAll;
   end;
 end;
@@ -661,6 +671,7 @@ begin
   FoldString := old_string;
   FFocusedControl := aControl;
   FNextControl := aNextControl;
+  Fpopgrid := aCxgridTableView;
   fsjj := sjj;
   FfieldString := control_fieldString;
   //得到控件所属的那个窗体
@@ -680,7 +691,7 @@ begin
   begin
     Application.MessageBox('数据集没有打开', PChar(TCustomForm(_control).caption),
       MB_OK + MB_ICONINFORMATION);
-    if aControl.Enabled and aControl.Visible then
+    if aControl.CanFocus then
       aControl.SetFocus;
     Abort;
   end;
@@ -700,7 +711,7 @@ begin
   else if sjj.RecordCount > 1 then
   begin
     try
-      // SetCxgridDefaultValue(aCxgridTableView, False);
+      SetCxgridDefaultValue(aCxgridTableView, False, False);
       ds_sjj := TDataSource.Create(_control);
       ds_sjj.DataSet := sjj;
       aCxgridTableView.DataController.DataSource := ds_sjj;
@@ -722,8 +733,10 @@ begin
 
       jibie := TcxGridLevel(aCxgridTableView.Level);
       aGrid := TcxGrid(jibie.Control);
-      aGrid.Visible := true;
+      aGrid.Width := aControl.Width;
       aCxgridTableView.ApplyBestFit();
+
+      aGrid.Visible := true;
       SetLeftAndTop(aControl, _left, _top);
 
       aGrid.Left := _left;
@@ -734,7 +747,8 @@ begin
       aGrid.OnExit := agridexit;
       aCxgridTableView.OnKeyPress := TableViewKeyPress_edit;
       aCxgridTableView.OnDblClick := TableViewDblClick;
-      aGrid.SetFocus;
+      if aGrid.CanFocus then
+        aGrid.SetFocus;
     finally
       _list.Free;
     end;
@@ -756,6 +770,11 @@ begin
     //    OptionsView.GroupByBox := False;
     OptionsView.Indicator := True;
     OptionsData.Deleting := False;
+    OptionsData.CancelOnExit := False;
+    OptionsData.Appending := False;
+    OptionsData.DeletingConfirmation := False;
+    OptionsData.Editing := False;
+    OptionsData.Inserting := False;
     OptionsView.IndicatorWidth := 30;
     OptionsBehavior.GoToNextCellOnEnter := False;
     //    Styles.StyleSheet := YZvw10;
@@ -852,9 +871,15 @@ begin
     _list.Free;
   end;
   if Assigned(FNextControl) then
-    FNextControl.SetFocus
+  begin
+    if FNextControl.canfocus then
+      FNextControl.SetFocus
+  end
   else
-    FFocusedControl.SetFocus;
+  begin
+    if FFocusedControl.canfocus then
+      FFocusedControl.SetFocus;
+  end;
 end;
 
 procedure TGridForm.SetValueFofGrid;
@@ -1185,7 +1210,7 @@ begin
       if Assigned(FNextControl) then
       begin
         if FNextControl.CanFocus then
-          FNextControl.SetFocus ;
+          FNextControl.SetFocus;
       end;
     end
     else if ListBox.Count > 1 then
@@ -1202,7 +1227,7 @@ begin
       ListBox.OnKeyPress := ListBoxKeypress;
       ListBox.OnDblClick := ListBoxDblClick;
       ListBox.SetFocus;
-      ListBox.Selected[0]:=True;
+      ListBox.Selected[0] := True;
     end;
   end;
 

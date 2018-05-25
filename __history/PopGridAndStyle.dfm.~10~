@@ -39,7 +39,7 @@ object GridForm: TGridForm
     end
     object cxstylEven: TcxStyle
       AssignedValues = [svColor, svFont]
-      Color = clWhite
+      Color = clSkyBlue
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
       Font.Height = -12
@@ -75,13 +75,14 @@ object GridForm: TGridForm
       Font.Style = [fsBold]
     end
     object cxstylBkg: TcxStyle
-      AssignedValues = [svColor, svFont]
+      AssignedValues = [svColor, svFont, svTextColor]
       Color = 16772301
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
       Font.Height = -13
       Font.Name = #24494#36719#38597#40657
       Font.Style = []
+      TextColor = clBlack
     end
     object cxstylHighLightBlueBk: TcxStyle
       AssignedValues = [svColor, svFont]
@@ -301,13 +302,14 @@ object GridForm: TGridForm
       TextColor = clGreen
     end
     object cxstyl_Header14: TcxStyle
-      AssignedValues = [svColor, svFont]
+      AssignedValues = [svColor, svFont, svTextColor]
       Color = 16763955
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
       Font.Height = -19
       Font.Name = #24494#36719#38597#40657
       Font.Style = [fsBold]
+      TextColor = clBlack
     end
     object cxstyl_content13: TcxStyle
       AssignedValues = [svColor, svFont, svTextColor]
@@ -327,25 +329,27 @@ object GridForm: TGridForm
       Font.Height = -17
       Font.Name = #24494#36719#38597#40657
       Font.Style = [fsBold]
-      TextColor = clBtnText
+      TextColor = clBlack
     end
     object cxstyl_odd13: TcxStyle
-      AssignedValues = [svColor, svFont]
+      AssignedValues = [svColor, svFont, svTextColor]
       Color = 16777164
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
       Font.Height = -17
       Font.Name = #24494#36719#38597#40657
       Font.Style = []
+      TextColor = clBlack
     end
     object cxstyl_even13: TcxStyle
-      AssignedValues = [svColor, svFont]
+      AssignedValues = [svColor, svFont, svTextColor]
       Color = clWhite
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
       Font.Height = -17
       Font.Name = #24494#36719#38597#40657
       Font.Style = []
+      TextColor = clBlack
     end
     object cxstyl_selectYellow13: TcxStyle
       AssignedValues = [svColor, svFont, svTextColor]
@@ -355,16 +359,17 @@ object GridForm: TGridForm
       Font.Height = -17
       Font.Name = #24494#36719#38597#40657
       Font.Style = [fsBold]
-      TextColor = clMaroon
+      TextColor = clBlack
     end
     object cxstyl_footer13: TcxStyle
-      AssignedValues = [svColor, svFont]
+      AssignedValues = [svColor, svFont, svTextColor]
       Color = clSkyBlue
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
       Font.Height = -17
       Font.Name = #24494#36719#38597#40657
       Font.Style = [fsBold]
+      TextColor = clBlack
     end
     object cxstyl_content10: TcxStyle
       AssignedValues = [svColor, svFont]
